@@ -326,8 +326,23 @@ python -m scripts.seed_employees
 ---
 
 ## Application Screenshots
+### Initial Search Interface
 
+This view shows the application on initial load with the search input centered and ready for user interaction.
+![Initial Search Screen](docs/output1.JPG)
+### Search by Employee Name
 
+This example shows the results returned when searching by an employee’s name. Matching records are displayed in a three-column grid layout.
+
+![Search by Name](docs/output2.JPG)
+
+![Search by Name](docs/output3.JPG)
+
+### Search by Department
+
+This example demonstrates searching employees by department. The results dynamically update based on the query.
+
+![Search by Department](docs/output4.JPG)
 
 ---
 
