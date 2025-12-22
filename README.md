@@ -176,6 +176,26 @@ The `main.py` file initializes the FastAPI application, registers routers, confi
 
 ---
 
+## Database Choice
+
+This project uses MySQL as the database.
+
+Reason for Choosing MySQL
+
+1. MySQL is a widely used relational database in production systems.
+
+2. It provides strong consistency and structured schema enforcement.
+
+3. It is well suited for employee and organizational data.
+
+4. It integrates seamlessly with SQLAlchemy ORM.
+
+5. The relational nature of employee data (name, department, designation, joining date) makes MySQL an appropriate choice compared to document-based databases.
+
+6. SQLAlchemy is used as an abstraction layer so that the database can be changed in the future without rewriting application logic.
+
+--- 
+
 ## Seed Script
 
 The project includes a Python seed script that generates 50 realistic employee records.
