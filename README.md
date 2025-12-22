@@ -278,88 +278,90 @@ The search input is debounced.
 
 ## Installation and Setup
 
-### Prerequisites
+This section describes the complete setup process required to run the project locally. Both backend and frontend must be running simultaneously.
 
-* Python 3.10 or higher
-* Node.js 18 or higher
-* MySQL 8.0 or higher
-* Git
+### Backend Setup
+* Step 1: Navigate to the backend directory
+`cd backend`
 
----
+* Step 2: Create a Python virtual environment
+`python -m venv venv`
 
-## Backend Setup
+* Step 3: Activate the virtual environment
 
-1. Navigate to the backend directory:
+Windows
 
-   ```bash
-   cd backend
-   ```
+`venv\Scripts\activate`
 
-2. Create and activate a virtual environment:
 
-   ```bash
-   python -m venv venv
-   ```
+macOS / Linux
 
-   Windows:
+`source venv/bin/activate`
 
-   ```bash
-   venv\Scripts\activate
-   ```
+* Step 4: Install backend dependencies
+`pip install -r requirements.txt`
 
-   macOS/Linux:
+* Step 5: Configure environment variables
 
-   ```bash
-   source venv/bin/activate
-   ```
+1. Create a  `.env` file inside the backend directory using the example below:
 
-3. Install dependencies:
+`DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=employee_db`
 
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-4. Configure environment variables:
-   Create a `.env` file using `.env.example`.
+2. Make sure the MySQL database specified above already exists.
 
-5. Start the backend server:
+* Step 6: Start the backend server
+`python -m uvicorn app.main:app --reload`
 
-   ```bash
-   python -m uvicorn app.main:app --reload
-   ```
 
----
+Once started, the backend will be available at:
+
+`http://127.0.0.1:8000`
+
+
+API documentation can be accessed at:
+
+`http://127.0.0.1:8000/docs`
 
 ## Database Seeding
 
-To populate the database with sample data:
+1. To populate the database with sample employee data, run the following command:
 
-```bash
-cd backend
-python -m scripts.seed_employees
-```
+`cd backend
+python -m scripts.seed_employees`
 
----
 
-## Frontend Setup
+2. This script inserts 50 realistic employee records and is safe to run multiple times.
 
-1. Navigate to the frontend directory:
+### Frontend Setup
+Step 1: Navigate to the frontend directory
+`cd frontend`
 
-   ```bash
-   cd frontend
-   ```
+### Step 2: Install frontend dependencies
+`npm install`
 
-2. Install dependencies:
+### Step 3: Start the frontend development server
+`npm run dev`
 
-   ```bash
-   npm install
-   ```
+The frontend application will be available at:
 
-3. Start the development server:
+`http://localhost:5173`
 
-   ```bash
-   npm run dev
-   ```
+## Running the Application
+
+To use the application correctly:
+
+1. Ensure the backend server is running on port `8000`
+
+2. Ensure the frontend server is running on port `5173`
+
+3. Open the frontend URL in a web browser
+
+4. Use the search input to query employees by name or department
 
 ---
 
