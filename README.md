@@ -211,6 +211,16 @@ Seed scripts are intentionally kept outside the application code to avoid mixing
 
 ---
 
+## System Architecture
+
+The following diagram illustrates the high-level architecture of the application and the interaction between the frontend, backend, and database layers.
+
+It shows how user input flows from the frontend to the backend API, how the request is processed through different backend layers, and how the response is returned and rendered in the UI.
+
+![System Architecture Diagram](docs/architecture.png)
+
+---
+
 ## Frontend Design and Architecture
 
 The frontend is built using React with a focus on simplicity and clarity.
