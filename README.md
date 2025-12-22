@@ -315,11 +315,11 @@ macOS / Linux
 
 1. Create a  `.env` file inside the backend directory using the example below:
 
-`DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=employee_db`
+`DB_HOST=localhost`
+`DB_PORT=3306`
+`DB_USER=root`
+`DB_PASSWORD=your_password`
+`DB_NAME=employee_db`
 
 
 2. Make sure the MySQL database specified above already exists.
@@ -341,8 +341,8 @@ API documentation can be accessed at:
 
 1. To populate the database with sample employee data, run the following command:
 
-`cd backend
-python -m scripts.seed_employees`
+`cd backend`
+`python -m scripts.seed_employees`
 
 
 2. This script inserts 50 realistic employee records and is safe to run multiple times.
