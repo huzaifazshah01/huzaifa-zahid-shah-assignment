@@ -248,6 +248,34 @@ Animations are implemented using basic CSS transitions to improve user experienc
 
 ---
 
+## Search Performance Optimization (Conceptual)
+
+The employee search feature is optimized both on the frontend and backend to ensure efficient performance.
+
+### Frontend Optimization
+
+The search input is debounced.
+
+1. API calls are delayed by a short interval after typing stops.
+
+2. This prevents sending a request on every keystroke.
+
+3. It reduces unnecessary network traffic and backend load.
+
+4. As a result, the application remains responsive even with rapid user input.
+
+### Backend Optimization
+
+1. The search query uses indexed database columns (name and department).
+
+2. Case-insensitive partial matching is handled at the database level.
+
+3. Only relevant rows are returned instead of fetching all records.
+
+4. The backend performs filtering directly in the database rather than in application memory, which improves scalability as the dataset grows.
+
+---
+
 ## Installation and Setup
 
 ### Prerequisites
