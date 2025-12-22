@@ -315,6 +315,40 @@ python -m scripts.seed_employees
 
 ---
 
+## Setup Steps
+
+This project is structured so that both backend and frontend can be set up independently and run together.
+
+### Backend Setup Summary
+
+1. Clone the repository and navigate to the backend directory.
+
+2. Create and activate a Python virtual environment.
+
+3. Install backend dependencies from requirements.txt.
+
+4. Configure database credentials using environment variables.
+
+5. Start the FastAPI server using Uvicorn.
+
+6. Seed the database with sample employee data.
+
+7. Once started, the backend exposes a REST API on port 8000 which the frontend consumes.
+
+### Frontend Setup Summary
+
+1. Navigate to the frontend directory.
+
+2. Install dependencies using npm.
+
+3. Start the Vite development server.
+
+4. The frontend runs on port 5173 and communicates with the backend using HTTP requests.
+
+5. Both servers must be running simultaneously for the application to work correctly.
+
+---
+
 ## How the System Works End-to-End
 
 * The frontend captures user input.
